@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="Авторизация"
-            android:textColor="@color/black"
+            android:textColor="#000000"
             android:textSize="20sp" />
 
         <TextView
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="Укажите свой телефоный номер,\nчтобы сделать заказ"
-            android:textColor="@color/black" />
+            android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
@@ -39,7 +39,7 @@
             android:paddingTop="16dp"
             android:paddingEnd="16dp"
             android:paddingBottom="16dp"
-            android:textColorHint="@color/black"
+            android:textColorHint="#000000"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -75,7 +75,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="32dp"
             android:text="@string/auth_conditions"
-            android:textColor="@color/black"
+            android:textColor="#000000"
             android:textSize="11sp" />
     </LinearLayout>
 </FrameLayout>
