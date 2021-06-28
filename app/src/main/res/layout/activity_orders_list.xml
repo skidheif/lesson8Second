@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/svRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitleFirstPart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="online"
+            android:textColor="#262633"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitleSecondPart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SWIFTBOOK"
+            android:textColor="#262633"
+            app:layout_constraintStart_toStartOf="@id/tvTitleFirstPart"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleFirstPart" />
+
+        <ImageView
+            android:id="@+id/ivCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shape_circle"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitleFirstPart"
+            app:layout_constraintStart_toEndOf="@id/tvTitleSecondPart"
+            app:layout_constraintTop_toTopOf="@id/tvTitleFirstPart" />
+
+        <ImageView
+            android:id="@+id/ivCloseIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_close_btn"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitleSecondPart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivCircle" />
+
+        <TextView
+            android:id="@+id/tvMainTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
+            android:text="Корзина"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleSecondPart" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clFirstDish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/decoration_background_filled_rounded_16"
+            android:elevation="6dp"
+            android:translationZ="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tvMainTitle">
+
+            <ImageView
+                android:id="@+id/ivFirstDishPhoto"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/img_tom_yam"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvFirstDishName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Том Ям суп с морепродуктами"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/ivFirstDishPhoto"
+                app:layout_constraintTop_toTopOf="@id/ivFirstDishPhoto" />
+
+            <TextView
+                android:id="@+id/tvFirstDishCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Кол-во 2 шт."
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivFirstDishPhoto"
+                app:layout_constraintStart_toEndOf="@id/ivFirstDishPhoto" />
+
+            <TextView
+                android:id="@+id/tvFirstDishPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/decoration_background_filled_rounded_8"
+                android:paddingStart="8dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="2dp"
+                android:text="470 ₽"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvFirstDishCount"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivFirstDishCloseBtn" />
+
+            <ImageView
+                android:id="@+id/ivFirstDishCloseBtn"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_close_btn"
+                app:layout_constraintBottom_toBottomOf="@id/ivFirstDishPhoto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivFirstDishPhoto"
+                app:tint="#A1A1A1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSecondDish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/decoration_background_filled_rounded_16"
+            android:elevation="6dp"
+            android:translationZ="4dp"
+            app:layout_constraintTop_toBottomOf="@id/clFirstDish">
+
+            <ImageView
+                android:id="@+id/ivSecondDishPhoto"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/img_set_filadelphia"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSecondDishName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Сет Филадельфия Party De Luxe"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/ivSecondDishPhoto"
+                app:layout_constraintTop_toTopOf="@id/ivSecondDishPhoto" />
+
+            <TextView
+                android:id="@+id/tvSecondDishCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Кол-во 1 шт."
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivSecondDishPhoto"
+                app:layout_constraintStart_toEndOf="@id/ivSecondDishPhoto" />
+
+            <TextView
+                android:id="@+id/tvSecondDishPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/decoration_background_filled_rounded_8"
+                android:paddingStart="8dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="2dp"
+                android:text="115 ₽"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvSecondDishCount"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivSecondDishCloseBtn" />
+
+            <ImageView
+                android:id="@+id/ivSecondDishCloseBtn"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_close_btn"
+                app:layout_constraintBottom_toBottomOf="@id/ivSecondDishPhoto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivSecondDishPhoto"
+                app:tint="#A1A1A1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clThirdDish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/decoration_background_filled_rounded_16"
+            android:elevation="6dp"
+            android:translationZ="4dp"
+            app:layout_constraintTop_toBottomOf="@id/clSecondDish">
+
+            <ImageView
+                android:id="@+id/ivThirdDishPhoto"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/img_desert_croissant"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvThirdDishName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Десерт круассан с грецкими"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/ivThirdDishPhoto"
+                app:layout_constraintTop_toTopOf="@id/ivThirdDishPhoto" />
+
+            <TextView
+                android:id="@+id/tvThirdDishCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Кол-во 1 шт."
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivThirdDishPhoto"
+                app:layout_constraintStart_toEndOf="@id/ivThirdDishPhoto" />
+
+            <TextView
+                android:id="@+id/tvThirdDishPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/decoration_background_filled_rounded_8"
+                android:paddingStart="8dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="2dp"
+                android:text="115 ₽"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvThirdDishCount"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivThirdDishCloseBtn" />
+
+            <ImageView
+                android:id="@+id/ivThirdDishCloseBtn"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_close_btn"
+                app:layout_constraintBottom_toBottomOf="@id/ivThirdDishPhoto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivThirdDishPhoto"
+                app:tint="#A1A1A1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="48dp"
+            android:text="Комментарий"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clThirdDish" />
+
+        <EditText
+            android:id="@+id/etCommentField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#FAFAFA"
+            android:gravity="top"
+            android:hint="Укажите дополнительную информацию \nк заказу"
+            android:minLines="10"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvComments" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/etCommentField"
+            app:layout_constraintStart_toStartOf="@id/etCommentField"
+            app:layout_constraintTop_toBottomOf="@id/etCommentField" />
+
+        <TextView
+            android:id="@+id/tvAdditionally"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:text="Дополнительно"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etCommentField" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swPickUpService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:checked="true"
+            android:text="Самовывоз"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAdditionally" />
+
+        <RadioGroup
+            android:id="@+id/rbPaymentMethods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/swPickUpService">
+
+            <RadioButton
+                android:id="@+id/rbByCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layoutDirection="rtl"
+                android:text="Оплата картой"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/swPickUpService" />
+
+            <RadioButton
+                android:id="@+id/rbByCash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layoutDirection="rtl"
+                android:text="Оплата наличными"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rbByCard" />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="24dp"
+            android:background="@color/colorbegin"
+            android:text="ЗАКАЗАТЬ"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rbPaymentMethods" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
